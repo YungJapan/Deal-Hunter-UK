@@ -1,0 +1,15 @@
+[
+  {
+    "id": "example-console-review-before-use",
+    "query": "Nintendo Switch OLED console",
+    "required_terms": ["nintendo", "switch", "oled", "console"],
+    "excluded_terms": ["faulty", "spares", "repair", "box only", "case only", "not working"],
+    "condition_ids": ["3000"],
+    "resale_gbp": "180.00",
+    "fee_rate": "0.15",
+    "fixed_fee_gbp": "0.30",
+    "outbound_postage_gbp": "6.00",
+    "packaging_gbp": "1.50",
+    "risk_reserve_gbp": "15.00"
+  }
+]

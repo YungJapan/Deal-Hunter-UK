@@ -1,0 +1,12 @@
+[
+  {
+    "itemId": "v1|offline-example|0",
+    "title": "Nintendo Switch OLED console used",
+    "conditionId": "3000",
+    "itemLocation": {"country": "GB"},
+    "buyingOptions": ["FIXED_PRICE"],
+    "price": {"value": "100.00", "currency": "GBP"},
+    "shippingOptions": [{"shippingCostType": "FIXED", "shippingCost": {"value": "5.00", "currency": "GBP"}}],
+    "itemWebUrl": "https://www.ebay.co.uk/itm/000000000000"
+  }
+]

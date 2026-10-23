@@ -1,0 +1,42 @@
+services:
+  - type: worker
+    name: deal-hunter-uk-v2
+    runtime: python
+    plan: 0.5c-512mb
+    region: frankfurt
+    numInstances: 1
+    buildCommand: python -m unittest discover -s tests -v
+    startCommand: python -m deal_hunter.app
+    disk:
+      name: deal-hunter-state
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.9
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: DATABASE_PATH
+        value: /var/data/alerts.sqlite3
+      - key: DRY_RUN
+        value: "true"
+      - key: MIN_MARGIN_GBP
+        value: "20"
+      - key: SCAN_INTERVAL_SECONDS
+        value: "900"
+      - key: MAX_PAGES_PER_RULE
+        value: "1"
+      - key: EBAY_CLIENT_ID
+        sync: false
+      - key: EBAY_CLIENT_SECRET
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        value: whatsapp:+14155238886
+      - key: TWILIO_WHATSAPP_TO
+        sync: false
+      - key: WHATSAPP_LAST_INBOUND_UTC
+        sync: false
